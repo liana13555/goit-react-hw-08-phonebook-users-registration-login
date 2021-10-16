@@ -1,14 +1,25 @@
 import React from 'react';
+import { useDispatch } from 'react-redux';
+import { filterContacts } from '../../redux/actions';
 
-const Filter = ({ value, onChange  }) => (
-    <label>
+export default function Filter() {
+    const dispatch = useDispatch();
+    
+    const changeFilter = e => {
+        let value = e.currentTarget.value;
+        dispatch(filterContacts(value));
+  };  
+
+    return (
+        <label>
         Find contacts by name
         <br/>
                 <input
-                    type="text"
-            value={value} onChange={onChange}/>
+                type="text"                
+           onChange={changeFilter}
+         />
     </label>
-);
-
-export default Filter;
-    
+    )     
+};
+   
+ 
