@@ -4,7 +4,7 @@ import { List, ListItem, ButtonDelete } from './ContactList.styled';
 
 const filtersContacts = (contacts, filter) =>
   contacts.filter(contact =>
-    contact.name.toLowerCase().includes(filter.toLowerCase()),
+    contact.name.toString().toLowerCase().includes(filter.toLowerCase()),
   );
 
 export default function ContactList() {
