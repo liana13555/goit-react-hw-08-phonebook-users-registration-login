@@ -1,7 +1,7 @@
 // import { combineReducers } from 'redux';
 import { createReducer, combineReducers } from '@reduxjs/toolkit';
 // import * as actions from './actions';
-import * as contactsActions from './actions';
+import * as contactsActions from './contacts-actions';
 
 const contacts = createReducer([], {
   [contactsActions.addContact]: (state, { payload }) => {
