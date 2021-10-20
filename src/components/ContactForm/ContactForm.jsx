@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addContact } from '../../redux/contacts/contacts-actions';
-import { FormContact, FormButton } from './ContactForm.styled';
+import { addContact } from 'redux/contacts/contacts-actions';
+import { FormContact, FormButton, FormInput } from './ContactForm.styled';
 
 
 export default function ContactForm() {
@@ -40,7 +40,7 @@ export default function ContactForm() {
             <label>
                 Name
                 <br />
-                <input
+                <FormInput
                     type="text"
                     name="name"
                     pattern="^[a-zA-Zа-яА-Я]+(([' -][a-zA-Zа-яА-Я ])?[a-zA-Zа-яА-Я]*)*$"
@@ -53,7 +53,7 @@ export default function ContactForm() {
             <br />            
             <label> Number
                 <br />
-                <input
+                <FormInput
                     type="tel"
                     name="number"
                     pattern="\+?\d{1,4}?[-.\s]?\(?\d{1,3}?\)?[-.\s]?\d{1,4}[-.\s]?\d{1,4}[-.\s]?\d{1,9}"

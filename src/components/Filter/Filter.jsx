@@ -1,6 +1,6 @@
 import React from 'react';
 import { useDispatch } from 'react-redux';
-import { filterContacts } from '../../redux/contacts/contacts-actions';
+import { filterContacts } from 'redux/contacts/contacts-actions';
 import { Label } from './Filter.styled';
 
 export default function Filter() {

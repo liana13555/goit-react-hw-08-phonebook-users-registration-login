@@ -7,11 +7,13 @@ export const List = styled.ol`
 `;
 
 export const ListItem = styled.li`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
   margin-bottom: 8px;
- 
+
+  @media screen and (min-width: 400px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  } 
 `;
 
 export const ButtonDelete = styled.button`
