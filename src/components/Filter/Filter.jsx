@@ -13,7 +13,7 @@ export default function Filter() {
 
     return (
         <Label>
-        Find contacts by name
+        Find contacts by name:
         <br/>
                 <input
                 type="text"                

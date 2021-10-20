@@ -16,9 +16,9 @@ export const ListItem = styled.li`
 
 export const ButtonDelete = styled.button`
   margin-left: 8px;
-
-  background-color: tomato;
-  border: 2px solid #e03618;
+  
+  background-color: #df626d;
+  border: 2px solid #df626d;
   cursor: pointer; 
 `;
 

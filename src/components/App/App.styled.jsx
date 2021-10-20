@@ -6,7 +6,7 @@ export const Container = styled.div`
   margin-right: auto;
   margin-left: auto;
   padding: 50px;
-  background: linear-gradient(45deg, rgb(241, 237, 236), #ec8e7e);
+  background: linear-gradient(45deg, rgb(228, 235, 238), #1e7fda);
   border-radius: 10px;
-  border: 2px solid #e03618;;
+  border: 2px solid #0f5597;;
 `;
