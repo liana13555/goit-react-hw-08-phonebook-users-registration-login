@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
-import { addContact } from 'redux/contacts/contacts-actions';
+import { addContact } from 'redux/contacts/contacts-operations';
 import { FormContact, FormButton, FormInput } from './ContactForm.styled';
 
 

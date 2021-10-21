@@ -1,6 +1,9 @@
 import styled from '@emotion/styled';
 
 export const FormContact = styled.form`
+  @media screen and (max-width: 400px) {
+    max-width: 240px;
+  }
   max-width: 300px;
   padding: 10px;
 
@@ -8,15 +11,11 @@ export const FormContact = styled.form`
   border: 2px solid #083763;
   border-radius: 5px;  
   cursor: pointer;
-  
-  @media screen and (max-width: 400px) {
-    max-width: 240px;
-  }
 `;
 
 export const FormInput = styled.input`  
  @media screen and (max-width: 400px){
-   width: 150px;
+   /* width: 150px; */
  }
 `;
 

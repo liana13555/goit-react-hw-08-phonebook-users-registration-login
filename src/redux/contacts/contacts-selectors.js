@@ -6,8 +6,9 @@ export const getFilter = state => state.contacts.filter;
 export const getError = state => state.contacts.error;
 
 export const getVisibleContacts = createSelector([getContacts, getFilter], (contacts, filter) => {
-  // выполнится, если изменится contacts или filter
   const normalizedFilter = filter.toLowerCase();
 
   return contacts.filter(({ name }) => name.toLowerCase().includes(normalizedFilter));
 });
+
+// выполнится, если изменится contacts или filter

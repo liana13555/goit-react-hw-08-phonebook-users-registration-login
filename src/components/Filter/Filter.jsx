@@ -1,26 +1,31 @@
 import React from 'react';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { contactsSelectors } from 'redux/contacts';
 import { filterContacts } from 'redux/contacts/contacts-actions';
 import { Label } from './Filter.styled';
 
 export default function Filter() {
-    const dispatch = useDispatch();
-    
-    const changeFilter = e => {
-        let value = e.currentTarget.value;
-        dispatch(filterContacts(value));
-  };  
+  const dispatch = useDispatch();
+  const value = useSelector(contactsSelectors.getFilter);  
+
+  const changeFilter = e => {
+      dispatch(filterContacts(e.target.value));
+  };
+  
+  const onBlurHandler = () =>
+    dispatch(filterContacts(''));
 
     return (
         <Label>
         Find contacts by name:
         <br/>
                 <input
-                type="text"                
-           onChange={changeFilter}
+          type="text"
+          value={value}
+          onChange={changeFilter}
+          onBlur={onBlurHandler}
          />
     </Label>
     )     
-};
-   
+};  
  

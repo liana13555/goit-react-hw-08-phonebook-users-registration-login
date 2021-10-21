@@ -10,7 +10,7 @@ export default function App() {
       <SectionTitle title="Phonebook">
         <ContactForm />
       </SectionTitle>
-
+      
       <SectionTitle title="Contacts">
         <Filter/>
         <ContactList/>
