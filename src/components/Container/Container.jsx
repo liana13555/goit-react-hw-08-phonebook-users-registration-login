@@ -1,5 +1,6 @@
-// import {Cont} from './Container.styled';
+import React from 'react';
+import Container from 'react-bootstrap/Container';
 
-export default function Container({ children }) {
-  return <div >{children}</div>;
+export default function Layout({ children }) {
+  return <Container >{children}</Container>;
 }
