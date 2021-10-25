@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
-import { Form, Label } from './LoginView.styled.jsx';
+// import { Form, Label } from './LoginView.styled.jsx';
+import { Form, Button } from 'react-bootstrap';
 
 export default function LoginView() {
   const dispatch = useDispatch();
@@ -31,6 +32,37 @@ export default function LoginView() {
       <h1>Страница логина</h1>
 
       <Form onSubmit={handleSubmit} autoComplete="off">
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+            placeholder="Enter email"
+          />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+            placeholder="Password"
+          />
+        </Form.Group>
+
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+
+      {/* <Form onSubmit={handleSubmit} autoComplete="off">
         <Label>
           Почта
           <input type="email" name="email" value={email} onChange={handleChange} />
@@ -42,7 +74,7 @@ export default function LoginView() {
         </Label>
 
         <button type="submit">Войти</button>
-      </Form>
+      </Form> */}
     </div>
   );
 }

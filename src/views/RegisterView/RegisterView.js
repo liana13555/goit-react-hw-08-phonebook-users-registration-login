@@ -1,7 +1,8 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
-import { Form, Label } from './RegisterView.styled';
+// import { Form, Label } from './RegisterView.styled';
+import { Form, Button } from 'react-bootstrap';
 
 export default function RegisterView() {
   const dispatch = useDispatch();
@@ -32,9 +33,53 @@ export default function RegisterView() {
 
   return (
     <div>
-      <h1>Страница регистрации</h1>
-
+      <h1>Registration page</h1>
       <Form onSubmit={handleSubmit} autoComplete="off">
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Name</Form.Label>
+          <Form.Control
+            type="text"
+            name="name"
+            value={name}
+            onChange={handleChange}
+            placeholder="Enter name"
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicEmail">
+          <Form.Label>Email address</Form.Label>
+          <Form.Control
+            type="email"
+            name="email"
+            value={email}
+            onChange={handleChange}
+            placeholder="Enter email"
+          />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicPassword">
+          <Form.Label>Password</Form.Label>
+          <Form.Control
+            type="password"
+            name="password"
+            value={password}
+            onChange={handleChange}
+            placeholder="Password"
+          />
+        </Form.Group>
+
+        <Form.Group className="mb-3" controlId="formBasicCheckbox">
+          <Form.Check type="checkbox" label="Check me out" />
+        </Form.Group>
+        <Button variant="primary" type="submit">
+          Submit
+        </Button>
+      </Form>
+
+      {/* <Form onSubmit={handleSubmit} autoComplete="off">
         <Label>
           Имя
           <input type="text" name="name" value={name} onChange={handleChange} />
@@ -51,7 +96,7 @@ export default function RegisterView() {
         </Label>
 
         <button type="submit">Зарегистрироваться</button>
-      </Form>
+      </Form> */}
     </div>
   );
 }
