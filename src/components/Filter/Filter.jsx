@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { contactsSelectors } from 'redux/contacts';
-import { filterContacts } from 'redux/contacts/contacts-actions';
+import { contactsSelectors } from '../../redux/contacts';
+import { filterContacts } from '../../redux/contacts/contacts-actions';
 import { Label } from './Filter.styled';
 
 export default function Filter() {

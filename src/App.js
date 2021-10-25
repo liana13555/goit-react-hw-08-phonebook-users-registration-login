@@ -8,6 +8,7 @@ import HomeView from './views/HomeView/HomeView';
 import RegisterView from './views/RegisterView/RegisterView';
 import LoginView from './views/LoginView/LoginView';
 import authOperations from './redux/auth/auth-operations';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function App() {
   const dispatch = useDispatch();
