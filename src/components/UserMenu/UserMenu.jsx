@@ -10,7 +10,7 @@ export default function UserMenu() {
 
   return (
     <Thumb>
-      <Avatar src={avatar} alt="" width="32" />
+      <Avatar src={avatar} alt="avatar" width="32" />
       <Name >Добро пожаловать, {name}</Name>
       <button type="button" onClick={() => dispatch(authOperations.logOut())}>
         Выйти
