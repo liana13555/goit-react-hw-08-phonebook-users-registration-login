@@ -4,10 +4,7 @@ import { Thumb, Title } from './HomeView.styled.jsx';
 const HomeView = () => (
   <Thumb>
     <Title>
-      Приветственная страница нашего сервиса{' '}
-      <span role="img" aria-label="Иконка приветствия">
-        💁‍♀️
-      </span>
+      Welcome to Phonebook App! <span role="img" aria-label="Иконка приветствия"></span>
     </Title>
   </Thumb>
 );
