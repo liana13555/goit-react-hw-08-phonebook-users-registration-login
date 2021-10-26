@@ -17,7 +17,7 @@ import { Nav, Navbar, Container } from 'react-bootstrap';
 export default function AppBar() {
   const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
   return (
-    <Navbar bg="dark" variant="dark">
+    <Navbar bg="primary" variant="dark">
       <Container>
         <Navigation />
         <Nav className="ml-auto">{isLoggedIn ? <UserMenu /> : <AuthNav />}</Nav>
