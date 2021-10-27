@@ -1,14 +1,7 @@
 import React from 'react';
+import { useSelector } from 'react-redux';
 import { NavLink } from 'react-router-dom';
-// import styled from '@emotion/styled';
-
-// const Styles = styled.nav`
-//   text-decoration: 'none';
-//   color: 'black';
-//   margin-left: 20px;
-//   font-size: 24px;
-//   font-weight: 500,
-// `;
+import { authSelectors } from '../redux/auth';
 
 const styles = {
   textDecoration: 'none',
@@ -18,15 +11,21 @@ const styles = {
   fontWeight: 500,
 };
 
-const Navigation = () => (
-  <nav>
-    <NavLink style={styles} to="/">
-      Home
-    </NavLink>
-    <NavLink style={styles} to="/contacts" exact>
-      Contacts
-    </NavLink>
-  </nav>
-);
+const Navigation = () => {
+  const isLoggedIn = useSelector(authSelectors.getIsLoggedIn);
+  return (
+    <nav>
+      <NavLink style={styles} to="/">
+        Home
+      </NavLink>
+
+      {isLoggedIn && (
+        <NavLink style={styles} to="/contacts" exact>
+          Contacts
+        </NavLink>
+      )}
+    </nav>
+  );
+};
 
 export default Navigation;
