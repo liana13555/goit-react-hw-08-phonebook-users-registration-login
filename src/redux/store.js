@@ -16,7 +16,7 @@ import { authReducer } from './auth';
 const authPersistConfig = {
   key: 'auth',
   storage,
-  whitelist: ['token'],
+  whitelist: ['token'], // из 'auth' сохранить только токен, будет записываться в LocalStorage
 };
 
 export const store = configureStore({
