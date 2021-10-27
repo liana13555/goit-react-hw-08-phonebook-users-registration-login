@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
-// import { Form, Label } from './LoginView.styled.jsx';
 import { Form, Button } from 'react-bootstrap';
 
 export default function LoginView() {
@@ -29,7 +28,7 @@ export default function LoginView() {
 
   return (
     <div>
-      <h1>Страница логина</h1>
+      <h2>Sign in to continue</h2>
 
       <Form onSubmit={handleSubmit} autoComplete="off">
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -58,23 +57,9 @@ export default function LoginView() {
         </Form.Group>
 
         <Button variant="primary" type="submit">
-          Submit
+          Sign in
         </Button>
       </Form>
-
-      {/* <Form onSubmit={handleSubmit} autoComplete="off">
-        <Label>
-          Почта
-          <input type="email" name="email" value={email} onChange={handleChange} />
-        </Label>
-
-        <Label>
-          Пароль
-          <input type="password" name="password" value={password} onChange={handleChange} />
-        </Label>
-
-        <button type="submit">Войти</button>
-      </Form> */}
     </div>
   );
 }

@@ -2,6 +2,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { authSelectors, authOperations } from '../../redux/auth';
 import defaultAvatar from './default-avatar.png';
 import { Thumb, Avatar, Name } from './UserMenu.styled';
+import { Button } from 'react-bootstrap';
 
 export default function UserMenu() {
   const dispatch = useDispatch();
@@ -11,10 +12,10 @@ export default function UserMenu() {
   return (
     <Thumb>
       <Avatar src={avatar} alt="avatar" width="32" />
-      <Name >Добро пожаловать, {name}</Name>
-      <button type="button" onClick={() => dispatch(authOperations.logOut())}>
-        Выйти
-      </button>
+      <Name >It nice to see you here, {name}</Name>
+      <Button type="button" variant="warning" onClick={() => dispatch(authOperations.logOut())}>
+        Log out
+      </Button>
     </Thumb>
   );
 }

@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
-// import { Form, Label } from './RegisterView.styled';
 import { Form, Button } from 'react-bootstrap';
 
 export default function RegisterView() {
@@ -33,7 +32,7 @@ export default function RegisterView() {
 
   return (
     <div>
-      <h1>Registration page</h1>
+      <h2>Create account</h2>
       <Form onSubmit={handleSubmit} autoComplete="off">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>
@@ -75,28 +74,9 @@ export default function RegisterView() {
           <Form.Check type="checkbox" label="Check me out" />
         </Form.Group>
         <Button variant="primary" type="submit">
-          Submit
+          Sign up
         </Button>
       </Form>
-
-      {/* <Form onSubmit={handleSubmit} autoComplete="off">
-        <Label>
-          Имя
-          <input type="text" name="name" value={name} onChange={handleChange} />
-        </Label>
-
-        <Label>
-          Почта
-          <input type="email" name="email" value={email} onChange={handleChange} />
-        </Label>
-
-        <Label>
-          Пароль
-          <input type="password" name="password" value={password} onChange={handleChange} />
-        </Label>
-
-        <button type="submit">Зарегистрироваться</button>
-      </Form> */}
     </div>
   );
 }
