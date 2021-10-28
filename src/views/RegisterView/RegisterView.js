@@ -32,7 +32,7 @@ export default function RegisterView() {
 
   return (
     <div>
-      <h2>Create account</h2>
+      <h3>Create account</h3>
       <Form onSubmit={handleSubmit} autoComplete="off">
         <Form.Group className="mb-3" controlId="formBasicEmail">
           <Form.Label>Name</Form.Label>

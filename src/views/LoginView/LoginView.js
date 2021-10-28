@@ -28,7 +28,7 @@ export default function LoginView() {
 
   return (
     <div>
-      <h2>Sign in to continue</h2>
+      <h3>Sign in to continue</h3>
 
       <Form onSubmit={handleSubmit} autoComplete="off">
         <Form.Group className="mb-3" controlId="formBasicEmail">

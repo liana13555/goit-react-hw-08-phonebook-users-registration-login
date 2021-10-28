@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import img from './image/phone4.jpg';
+import img from './image/phone3.jpg';
 
 export const Thumb = styled.div`
    min-height: 'calc(100vh - 50px)';
@@ -8,8 +8,13 @@ export const Thumb = styled.div`
    justify-content: center;
    margin-left: auto;
    margin-right: auto;
-   
-   background-image: url(${img});
+   background-image: linear-gradient(
+    to right,
+    rgba(253, 254, 255, 0.4),
+    rgba(249, 249, 253, 0.4)),
+    url(${img});
+
+   /* background-image: url(${img}); */
    max-width: 900px;
    height: 600px;
    background-size: cover;

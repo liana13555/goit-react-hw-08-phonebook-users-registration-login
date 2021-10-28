@@ -1,7 +1,6 @@
 import { useDispatch, useSelector } from 'react-redux';
 import { useEffect } from 'react';
-import { contactsSelectors } from '../../redux/contacts';
-import  contactsOperations  from '../../redux/contacts/contacts-operations';
+import { contactsSelectors, contactsOperations } from '../../redux/contacts';
 import { List, ListItem, ButtonDelete, Span } from './ContactList.styled';
 
 export default function ContactList() {

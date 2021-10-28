@@ -12,7 +12,7 @@ export default function UserMenu() {
   return (
     <Thumb>
       <Avatar src={avatar} alt="avatar" width="32" />
-      <Name >It nice to see you here, {name}</Name>
+      <Name >It nice to see you here, {name}!!!</Name>
       <Button type="button" variant="warning" onClick={() => dispatch(authOperations.logOut())}>
         Log out
       </Button>
