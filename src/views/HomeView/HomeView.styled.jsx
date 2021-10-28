@@ -15,7 +15,7 @@ export const Thumb = styled.div`
     url(${img});
 
    /* background-image: url(${img}); */
-   max-width: 900px;
+   max-width: 800px;
    height: 600px;
    background-size: cover;
    background-repeat: no-repeat;
