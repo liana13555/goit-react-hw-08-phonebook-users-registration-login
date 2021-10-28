@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
 import { Form, Button } from 'react-bootstrap';
+import { Thumb } from './LoginView.styled.jsx';
 
 export default function LoginView() {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ export default function LoginView() {
   };
 
   return (
-    <div>
+    <Thumb>
       <h3>Sign in to continue</h3>
 
       <Form onSubmit={handleSubmit} autoComplete="off">
@@ -60,6 +61,6 @@ export default function LoginView() {
           Sign in
         </Button>
       </Form>
-    </div>
+    </Thumb>
   );
 }

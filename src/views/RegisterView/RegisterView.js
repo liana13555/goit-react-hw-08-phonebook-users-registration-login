@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
 import { Form, Button } from 'react-bootstrap';
+import { Thumb } from './RegisterView.styled.jsx';
 
 export default function RegisterView() {
   const dispatch = useDispatch();
@@ -31,7 +32,7 @@ export default function RegisterView() {
   };
 
   return (
-    <div>
+    <Thumb>
       <h3>Create account</h3>
       <Form onSubmit={handleSubmit} autoComplete="off">
         <Form.Group className="mb-3" controlId="formBasicEmail">
@@ -77,6 +78,6 @@ export default function RegisterView() {
           Sign up
         </Button>
       </Form>
-    </div>
+    </Thumb>
   );
 }
