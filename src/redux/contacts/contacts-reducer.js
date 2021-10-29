@@ -1,6 +1,5 @@
 import { createReducer, combineReducers } from '@reduxjs/toolkit';
-// import { contactsOperations } from './contacts-operations';
-// import * as contactsActions from './contacts-actions';
+import * as contactsActions from './contacts-actions';
 import {
   fetchContactsRequest,
   fetchContactsSuccess,
@@ -43,17 +42,8 @@ const isLoading = createReducer(false, {
 
 const error = createReducer(null, {});
 
-// const error = createReducer(null, {
-//   [fetchContacts.rejected]: (_state, { payload }) => payload,
-//   [fetchContacts.pending]: () => null,
-//   [addContact.rejected]: (_state, { payload }) => payload,
-//   [addContact.pending]: null,
-//   [deleteContact.rejected]: (_state, { payload }) => payload,
-//   [deleteContact.pending]: null,
-// });
-
 const filter = createReducer('', {
-  // [contactsActions.filterContacts]: (_, { payload }) => payload,
+  [contactsActions.filterContacts]: (_, { payload }) => payload,
 });
 
 export default combineReducers({
