@@ -4,6 +4,7 @@ import { Switch } from 'react-router-dom';
 import AppBar from './components/AppBar';
 import Container from './components/Container';
 import authOperations from './redux/auth/auth-operations';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import PrivateRoute from './components/PrivateRoute';
 import PublicRoute from './components/PublicRoute';
@@ -46,6 +47,7 @@ export default function App() {
             </PrivateRoute>
           </Suspense>
         </Switch>
+        <ToastContainer position="bottom-left" autoClose={3000} />
       </Container>
     )
   );
