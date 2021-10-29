@@ -13,7 +13,7 @@ export default function UserMenu() {
     <Thumb>
       <Avatar src={avatar} alt="avatar" width="32" />
       <Name >It nice to see you here, {name}!!!</Name>
-      <Button type="button" variant="warning" onClick={() => dispatch(authOperations.logOut())}>
+      <Button type="button" variant="warning" size="sm" onClick={() => dispatch(authOperations.logOut())}>
         Log out
       </Button>
     </Thumb>

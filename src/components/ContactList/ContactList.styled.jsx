@@ -2,8 +2,9 @@ import styled from '@emotion/styled';
 
 export const List = styled.ol`
   max-width: 300px;
+  margin-top: 10px;
+  padding-left: 40px;
   cursor: pointer;
-  padding-left: 5px;
 `;
 
 export const ListItem = styled.li`
@@ -14,14 +15,6 @@ export const ListItem = styled.li`
     align-items: center;
     justify-content: space-between;
   } 
-`;
-
-export const ButtonDelete = styled.button`
-  margin-left: 8px;
-  
-  background-color: #e7b352;
-  border: 2px solid #e67e38;;
-  cursor: pointer; 
 `;
 
 export const Span = styled.span`
