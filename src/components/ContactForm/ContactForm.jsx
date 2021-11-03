@@ -3,7 +3,6 @@ import { useDispatch, useSelector } from 'react-redux';
 import contactsOperations from '../../redux/contacts/contacts-operations';
 import  contactsSelectors from '../../redux/contacts/contacts-selectors';
 import { toast } from 'react-toastify';
-// import { v4 as uuidv4 } from 'uuid';
 import { Thumb} from './ContactForm.styled';
 import { Form, Button } from 'react-bootstrap';
 
@@ -13,7 +12,6 @@ export default function ContactForm() {
     const [number, setNumber] = useState('');
     
     const contacts = useSelector(contactsSelectors.getContacts);
-    // const contact = { id: uuidv4(), name, number };
 
     const handleChange = event => {
     const { name, value } = event.currentTarget;

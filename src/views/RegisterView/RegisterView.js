@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { authOperations } from '../../redux/auth';
 import { Form, Button } from 'react-bootstrap';
 import { Thumb } from './RegisterView.styled.jsx';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function RegisterView() {
   const dispatch = useDispatch();
@@ -35,7 +36,7 @@ export default function RegisterView() {
     <Thumb>
       <h3>Create account</h3>
       <Form onSubmit={handleSubmit} autoComplete="off">
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId={uuidv4()}>
           <Form.Label>Name</Form.Label>
           <Form.Control
             type="text"
@@ -46,7 +47,7 @@ export default function RegisterView() {
           />
         </Form.Group>
 
-        <Form.Group className="mb-3" controlId="formBasicEmail">
+        <Form.Group className="mb-3" controlId={uuidv4()}>
           <Form.Label>Email address</Form.Label>
           <Form.Control
             type="email"
